@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="" />
+    <meta name="author" content="MUHAMMAD YOUSUF" />
+    <title>TEC Labor ID Card Generator</title>
+
+    <link href="../assets/css/bootstrap.min.css" rel="stylesheet" />
+    <script src="../assets/js/html2canvas.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <!-- Custom styles for this template -->
+    <link href="../assets/css/add.css" rel="stylesheet" />
+  </head>
+
+  <body class="text-center">
+    <main class="form-signin w-100 m-auto">
+      <div id="mainForm">
+        <img
+          class="mb-4"
+          src="../assets/images/TEC-LOGO-PROFILE-PICTURE.png"
+          alt=""
+          width="72"
+          height="57"
+          style="border: none"
+        />
+        <h1 class="h3 mb-3 fw-normal">TEC Labor ID Card</h1>
+
+        <div class="form-floating pb-1">
+          <input
+            type="text"
+            class="form-control"
+            id="name"
+            placeholder="MUHAMMAD YOUSUF"
+          />
+          <label for="name">Full Name</label>
+        </div>
+
+        <div class="form-floating pb-1">
+          <input
+            type="text"
+            class="form-control"
+            id="fname"
+            placeholder="MUHAMMAD YOUSUF"
+          />
+          <label for="fname">Father's Name</label>
+        </div>
+
+        <div class="form-floating pb-1">
+          <input
+            type="text"
+            class="form-control"
+            id="designation"
+            placeholder="ACCOUNTANT"
+          />
+          <label for="designation">Designation</label>
+        </div>
+
+        <div class="form-floating pb-1">
+          <input
+            type="text"
+            class="form-control"
+            id="cnic"
+            placeholder="12345-1234567-1"
+          />
+          <label for="cnic">CNIC</label>
+        </div>
+
+        <div class="form-floating pb-1">
+          <input
+            type="date"
+            class="form-control"
+            id="expiry"
+            placeholder="31st December, 2022"
+          />
+          <label for="expiry">Expiry Date</label>
+        </div>
+
+        <div class="pt-2">
+          <input
+            type="file"
+            class="form-control form-control-lg"
+            onchange="loadFile(event)"
+            id="file"
+          />
+          <!-- <label for="file">Select Image</label> -->
+        </div>
+
+        <br />
+
+        <button class="w-100 btn btn-lg btn-primary" onclick="generateID()">
+          Generate
+        </button>
+
+        <a class="w-100 btn btn-sm btn-success my-3" href="../index.html">
+          Back to Dashboard
+        </a>
+        <p class="mt-5 mb-3 text-muted">&copy; MYousufSoomro</p>
+        <p class="mt-5 mb-3 text-muted">Last updated: 05-10-2023 at 12:59 AM</p>
+      </div>
+
+      <div id="upperWrapper">
+        <div class="spinner-border text-primary" role="status">
+          <span class="visually-hidden">Loading...</span>
+        </div>
+        <div id="wrapper" class="specific">
+          <div id="header">
+            <h1 id="title">Top Engineering Construction</h1>
+            <p>Civil, Mechanical, Electrical & Plumbing Contractor</p>
+          </div>
+          <div id="image">
+            <img id="img" src="#" width="260" height="280" alt="picture" />
+          </div>
+
+          <div id="main">
+            <div id="menu">
+              <p class="menuData">Name:</p>
+              <p class="menuData">Father's Name:</p>
+              <p class="menuData">Designation:</p>
+              <p class="menuData">CNIC:</p>
+              <p class="menuData">Expiry Date:</p>
+            </div>
+            <div id="content">
+              <p id="name2" class="contentData">Muhammad Hassan</p>
+              <p id="fname2" class="contentData">Jan Muhammad</p>
+              <p id="designation2" class="contentData">Site Engineer</p>
+              <p id="cnic2" class="contentData">45201-54286243-5</p>
+              <p id="expiry2" class="contentData">31st December, 2022</p>
+            </div>
+          </div>
+
+          <div class="column">
+            <img class="stampImage" src="../assets/images/stamp.png" />
+            <p class="sign">Signature</p>
+          </div>
+
+          <div id="footer">
+            Flat # C-4 First Floor Momin Square, Near NIPA, Block-06
+            Gulshan-e-Iqbal, Karachi <br />
+            info@tecpk.com <span id="phone">021-34970117</span>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+
+  <script type="module" src="../assets/js/add.js"></script>
+</html>
